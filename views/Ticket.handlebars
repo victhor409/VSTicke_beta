@@ -1,0 +1,45 @@
+<form action="/addTicket" method="POST">
+    <p>Ticket</p>
+
+    <p2>Titulo</p2>
+    <input type="text" name="titulo" />
+
+    <p2>Cliente</p2>
+    <input type="text" name="cliente">
+
+    <p2>CNPJ</p2>
+    <input type="text" name="cnpj">
+
+    <p2>Tecnico Responsavel</p2>
+    <input type="text" name="tecnicoRes">
+
+    <p2>Descricao</p2>
+    <input type ="text" name="descricao">
+
+    
+
+
+   
+
+    <button type="submit">Finalizar</button>
+
+</form>
+
+{{#each tickets}}
+<tr>
+    <td>{{titulo}}</td>
+    <td>{{cliente}}</td>
+    <td>{{cnpj}}</td>
+    <td>{{tecnicoRes}}</td>
+    <td>{{descricao}}</td>
+    <div class="group-action">
+        <form class="form-class" action="/updateTicket/{{id}}" method="GET">
+            <button type="submit">Atualizar</button>
+
+        </form>
+
+    </div>
+
+
+</tr>
+{{/each}}

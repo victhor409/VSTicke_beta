@@ -1,0 +1,15 @@
+<h1>Chamados Ativos</h1>
+
+{{#each tickets}}
+
+    <small>{{dataValues.createdAt}}</small>
+    <p>{{dataValues.titulo}}</p><br>
+    <p2>ID: {{dataValues.id}}</p2><br>
+    <p2>Cliente: {{dataValues.cliente}}</p2><br>
+    <p2>Descrição: {{dataValues.descricao}}</p2><br>
+    <a href="/updateTicket/{{dataValues.id}}"><button>Atualizar</button></a>
+    <a href="/finishTicket/{{dataValues.id}}"><button>Fechar Chamado</button></a>
+    <hr>
+
+{{/each}}
+    
